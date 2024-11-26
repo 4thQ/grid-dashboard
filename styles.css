@@ -4,9 +4,116 @@
   border: solid 2px green;
   display: grid;
   grid-template-columns: 200px 600px;
-  grid-template-rows: 200px 100px 400px 200px;
+  grid-template-rows: 100px 50px 400px 100px;
+  grid-template-areas:
+    "h h"
+    "s n"
+    "s a"
+    "f f";
+  gap: 4px;
 }
 
-.container > * {
+/* HEADER------------------------------------------------------------------------------------------------ */
+.header {
+  grid-area: h;
+  background-color: grey;
+  display: grid;
+  grid-template-columns: 200px 600px;
+  align-items: center;
+  text-align: end;
+}
+
+.header-logo {
+  display: grid;
   text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.header-nav {
+  display: grid;
+  grid-template-columns: 120px 120px 120px 120px;
+  text-align: center;
+  justify-content: right;
+}
+
+.header-nav > * {
+  font-weight: 600;
+}
+
+/* HEADER FINSHED------------------------------------------------------------------------------------------------ */
+
+/* SDIEBAR------------------------------------------------------------------------------------------------ */
+
+.sidebar {
+  grid-area: s;
+  background-color: rgb(115, 255, 0);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 100px 100px 100px;
+  gap: 10px;
+  padding: 3px;
+  margin: 3px;
+}
+
+.pic1 {
+  background-color: aqua;
+}
+
+.pic2 {
+  background-color: blueviolet;
+}
+.pic3 {
+  background-color: yellowgreen;
+}
+
+.pic4 {
+  background-color: tomato;
+}
+
+/* SIDEBAR FINISHED------------------------------------------------------------------------------------------------ */
+
+/* NAV ------------------------------------------------------------------------------------------------ */
+.nav {
+  grid-area: n;
+  background-color: red;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  align-items: center;
+}
+
+.nav > * {
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* NAV FINISHED ------------------------------------------------------------------------------------------------ */
+
+/* ARTICLE ------------------------------------------------------------------------------------------------ */
+.article {
+  grid-area: a;
+  background-color: rgb(27, 46, 63);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 3px;
+  margin: 3px;
+}
+
+.article > * {
+  background-color: rgb(185, 150, 150);
+  font-size: 8px;
+  text-align: center;
+}
+
+/* ARTICLE FINISHED ------------------------------------------------------------------------------------------------ */
+.footer {
+  grid-area: f;
+  background-color: grey;
+  display: grid;
+  text-align: center;
+  align-items: center;
 }
