@@ -3,8 +3,8 @@
   height: 100vh;
   border: solid 2px green;
   display: grid;
-  grid-template-columns: 200px 600px;
-  grid-template-rows: 100px 50px 400px 100px;
+  grid-template-columns: 2fr 6fr;
+  grid-template-rows: 0.5fr 0.3fr 4fr 0.5fr;
   grid-template-areas:
     "h h"
     "s n"
@@ -18,7 +18,7 @@
   grid-area: h;
   background-color: grey;
   display: grid;
-  grid-template-columns: 200px 600px;
+  grid-template-columns: 2fr 6fr;
   align-items: center;
   text-align: end;
 }
@@ -35,6 +35,8 @@
   grid-template-columns: 120px 120px 120px 120px;
   text-align: center;
   justify-content: right;
+  gap: 190px;
+  padding-right: 80px;
 }
 
 .header-nav > * {
@@ -50,10 +52,10 @@
   background-color: rgb(115, 255, 0);
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100px 100px 100px 100px;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 10px;
-  padding: 3px;
-  margin: 3px;
+  padding: 10px;
+  margin: 10px;
 }
 
 .pic1 {
@@ -99,13 +101,12 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 10px;
-  padding: 3px;
-  margin: 3px;
+  padding: 10px;
 }
 
 .article > * {
   background-color: rgb(185, 150, 150);
-  font-size: 8px;
+  font-size: 16px;
   text-align: center;
 }
 
